@@ -1,4 +1,9 @@
 <?php
+/*
+ * Build and count Kaprekar numbers/constants
+ * ver. 1.0 - Thorsten Born
+ */
+
 // set parameter
 $min = 1000;
 $showSingleSteps = false;
@@ -11,7 +16,7 @@ for ($i = $min; $i < $max; $i++) {
     $number = $i;
     $iteration = 0;
     $lastNumber = 0;
-    // $iteration just stop on a unforcast failure and avoiding endless iterations
+    // The loop should stop in case of an unforeseen error and avoid an infinite loop.
     while ($number !== $lastNumber & $iteration < 100) {
         $lastNumber = $number;
         $iteration++;
